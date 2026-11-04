@@ -1,6 +1,6 @@
 'use strict';
 const $=id=>document.getElementById(id);
-const symbols=['7','BAR','체리','망고','종'],weights=[5,10,100,200,30],multipliers=[10,5,2,1.5,3],bets=[10,50,100,250,500,1000],defaultBetIndex=bets.length-1;
+const symbols=['7','BAR','체리','망고','종'],weights=[5,10,150,200,30],multipliers=[10,5,2,1,3],bets=[10,50,100,250,500,1000],defaultBetIndex=bets.length-1;
 const chipStep=1000;
 let balance=10000,betIndex=defaultBetIndex,count=0,wins=0,last=0,profit=0,busy=false;
 const state=()=>({balance,bet:bets[betIndex],count,wins,last,busy});

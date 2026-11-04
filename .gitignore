@@ -1,6 +1,3 @@
-﻿# 비밀번호/로그 파일 (민감정보)
-password.txt
-pwlog.txt
-*.env
+﻿*.env
 .env*
 node_modules/
