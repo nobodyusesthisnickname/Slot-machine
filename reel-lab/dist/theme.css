@@ -1,0 +1,19 @@
+/* 테마 오버라이드 (style.css 뒤에 로드). 레이아웃 크기는 건드리지 않고 색·배경·이미지만 바꾼다. */
+
+/* 테마 이미지(릴/배당표/관리자 표) */
+.reel .symbol img.theme-img{display:block;flex:none;width:100%;height:auto;max-height:95%;object-fit:contain;pointer-events:none;user-select:none}
+.sprite img.theme-img{display:block;max-width:100%;max-height:95%;object-fit:contain;pointer-events:none}
+.admin-table img.theme-img{width:40px;height:40px;object-fit:contain;vertical-align:middle}
+.reels[class*="win-t"] .reel .symbol img.theme-img{animation:symBounce .6s ease-out 1}
+
+/* 테마 배경: themes.js 의 background 가 있을 때만 교체 */
+html.has-theme-bg body:before{background-image:var(--theme-bg)}
+
+/* 색 변수: 테마의 vars 로 지정하면 적용 (없으면 기존 색 유지) */
+html[data-theme] .reels{background:var(--t-frame,linear-gradient(110deg,#775628,#fff0b3 22%,#a57b34 42%,#f6d990 70%,#5c3c16));border-color:var(--t-frame-edge,#e9c87a)}
+html[data-theme] .reel{background:var(--t-reel,linear-gradient(90deg,#bca578,#fff4d6 17%,#fffbea 48%,#f5e8c5 78%,#aa9162))}
+
+/* 설정 패널의 테마 선택 */
+#theme-select{background:#1a140c;color:#eedba7;border:1px solid #a7813d;border-radius:8px;padding:6px 8px;font:inherit}
+
+/* 테마별 추가 규칙은 아래에 html[data-theme="id"] 로 작성 */
